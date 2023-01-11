@@ -9,6 +9,7 @@ pipeline {
         HARBOR_PROJECT = 'rshiels-harbor-project'
         APP_IMAGE_NAME = 'app'
         DB_IMAGE_NAME = 'db'
+    }
     stages {
         stage('Application repository') {
             steps {
@@ -75,7 +76,7 @@ pipeline {
                             echo err.getMessage()
                         }
                     }
-                }
+                }    
             }
         }
         //TODO("Lab 7 - Automated Security Scans"): add a stage
